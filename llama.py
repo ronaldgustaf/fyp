@@ -15,7 +15,7 @@ class LlamaLLM:
         """
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model_name = model_name
-        self.access_token = "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"
+        self.access_token = open(r"./tokens.txt","r").read()
 
         # Load the tokenizer and model from Hugging Face
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, use_auth_token=self.access_token)
