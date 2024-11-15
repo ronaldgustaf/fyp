@@ -42,7 +42,3 @@ class LlamaLLM:
         # Wrap the pipeline in a HuggingFacePipeline for easy integration with LangChain or other libraries
         self.llm = HuggingFacePipeline(pipeline=self.pipe, model_kwargs={'temperature': 0.1})
 
-# Example usage:
-# llama_llm = LlamaLLM(access_token="your_access_token")
-# response = llama_llm.generate_text("Analyze the stock market trends...")
-# print(response)
